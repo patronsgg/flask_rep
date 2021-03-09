@@ -1,0 +1,40 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<br/>
+
+<h1>Результаты теста:</h1>
+
+<div style="padding:2em">
+{% if army=='yes' and draw=='yes' and food=='yes' and bullying=='yes' %}
+    <h2>Вам пора в войска ВДВ!</h2>
+{% elif army=='yes' and draw=='yes' and food=='yes' and bullying=='no' %}
+    <h2>Вам нужно в танковые войска!</h2>
+{% elif army=='yes' and draw=='yes' and food=='no' and bullying=='yes' %}
+    <h2>С вас получится хороший военный повар</h2>
+{% elif army=='yes' and draw=='no' and food=='yes' and bullying=='yes' %}
+    <h2>Ничего научат вас всему!</h2>
+{% elif army=='no' and draw=='yes' and food=='yes' and bullying=='yes' %}
+    <h2>Вас начали искать</h2>
+{% elif army=='yes' and draw=='yes' and food=='no' and bullying=='no' %}
+    <h2>Пора в космические войска</h2>
+{% elif army=='yes' and draw=='no' and food=='yes' and bullying=='no' %}
+    <h2>Вам в войска связи!</h2>
+{% elif army=='no' and draw=='yes' and food=='yes' and bullying=='no' %}
+    <h2>Вы психически не здоровы</h2>
+{% elif army=='yes' and draw=='no' and food=='no' and bullying=='yes' %}
+    <h2>Вам надо в подводные силы</h2>
+{% elif army=='no' and draw=='yes' and food=='no' and bullying=='yes' %}
+    <h2>Береговые войска вас ждут</h2>
+{% elif army=='no' and draw=='no' and food=='yes' and bullying=='yes' %}
+    <h2>Войска связи - ваша мечта</h2>
+{% elif army=='yes' and draw=='no' and food=='no' and bullying=='no' %}
+    <h2>Инженерные войска, вот что вам нужно!</h2>
+{% elif army=='no' and draw=='no' and food=='yes' and bullying=='no' %}
+    <h2>Вас научить Родину любить????</h2>
+{% else %}
+    <h2>Мы отправили результат опроса в ближайщий к вам военкомат!</h2>
+{% endif %}
+
+{% endblock %}
+</div>

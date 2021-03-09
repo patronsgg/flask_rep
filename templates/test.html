@@ -1,0 +1,56 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<form method="post" novalidate>
+    <div>
+        {{ form.csrf_token }}
+    </div>
+    <div>
+        {{ form.army_answer.label() }}
+    </div>
+    <div>
+        {{ form.army_answer() }}
+    </div>
+    <div>
+        {% for error in form.army_answer.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.draw_answer.label() }}
+    </div>
+    <div>
+        {{ form.draw_answer() }}
+    </div>
+    <div>
+        {% for error in form.draw_answer.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.food_answer.label() }}
+    </div>
+    <div>
+        {{ form.food_answer() }}
+    </div>
+    <div>
+        {% for error in form.food_answer.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.bullying_answer.label() }}
+    </div>
+    <div>
+        {{ form.bullying_answer() }}
+    </div>
+    <div>
+        {% for error in form.bullying_answer.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
